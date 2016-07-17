@@ -15,7 +15,7 @@ g. xxx.status
   200: "OK"
   404: Page not found
 
-Example I:
+h. Example I:
 function loadDoc() {
     if (window.XMLHttpRequest) {
     var xhttp = new XMLHttpRequest();
