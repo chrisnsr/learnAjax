@@ -14,3 +14,21 @@ f. xxx.readyState:
 g. xxx.status
   200: "OK"
   404: Page not found
+
+Example I:
+function loadDoc() {
+    if (window.XMLHttpRequest) {
+    var xhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    var xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById("demo").innerHTML = xhttp.responseText;
+        }
+    };
+    xhttp.open("GET", "xxx.url", true);
+    xhttp.send(xxx);
+}
